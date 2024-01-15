@@ -3,7 +3,7 @@ from requests_html import HTMLSession
 import pywhatkit as pwk
 import sys, os
 
-KEYWORDS = ["designan"]                                   # Fill this list with string keywords, separated by commas
+KEYWORDS = []                                   # Fill this list with string keywords, separated by commas
 WPP_GROUP_ID = None                             # Fill here for whatsapp group id to send results
 AUTO_MSG_HOUR = None                            # Fill here for auto message hour (24 hours format)
 AUTO_MSG_MIN = None                             # Fill here for auto message minute
