@@ -55,7 +55,7 @@ from a whatsapp group invitation link (e.g. https://chat.whatsapp.com/etvyBn4FS4
 the final group of characters); and AUTO_MSG_HOUR and AUTO_MSG_MIN are integers for the hour and minute where
 the message will be sent (hour must be set in 24 hour format). E.g.:
 
-WPP_GROUP_ID = etvyBn4FS4Y3OJSA793rGL
+WPP_GROUP_ID = "etvyBn4FS4Y3OJSA793rGL"
 AUTO_MSG_HOUR = 17
 AUTO_MSG_MIN = 30
 
