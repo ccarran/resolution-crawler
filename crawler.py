@@ -3,7 +3,7 @@ from requests_html import HTMLSession
 import pywhatkit as pwk
 import sys, os
 
-KEYWORDS = []                                   # Fill this list with string keywords, separated by commas
+KEYWORDS = ["designan"]                                   # Fill this list with string keywords, separated by commas
 WPP_GROUP_ID = None                             # Fill here for whatsapp group id to send results
 AUTO_MSG_HOUR = None                            # Fill here for auto message hour (24 hours format)
 AUTO_MSG_MIN = None                             # Fill here for auto message minute
@@ -185,6 +185,8 @@ def main():
 
     # Checks whether to use kw mode or extKwList mode
     if keywordMode or externalKeywordList:
+        keywordList = None
+
         if externalKeywordList:
             keywordList = getKeywordsFromFile(keywordPath, keywordFileSeparator)
         elif len(KEYWORDS) > 0:
@@ -192,7 +194,8 @@ def main():
         else:
             print("Keyword list empty. All articles extracted.")
 
-        articleList = extractKeyArticles(articleList, keywordList)
+        if keywordList:
+            articleList = extractKeyArticles(articleList, keywordList)
 
     # Writes results to a file
     writeToFile(articleList)
