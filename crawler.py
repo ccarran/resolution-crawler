@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from requests_html import HTMLSession
+from unidecode import unidecode
 import pywhatkit as pwk
 import sys, os
 
@@ -63,7 +64,7 @@ def writeToFile(articleList):
 
     Output: none
     """
-    file = open('results.txt', 'w')
+    file = open('results.txt', 'w', encoding='utf-8')
 
     for article in articleList:
         file.write(article['title'] + '\n')
@@ -92,7 +93,7 @@ def extractKeyArticles(articleList, keywordList):
 
     for article in articleList:
         for keyword in keywordList:
-            if keyword.lower() in article['description'].lower():
+            if unidecode(keyword).lower() in unidecode(article["description"]).lower():
                 newArticleList.append(article)
                 break
 

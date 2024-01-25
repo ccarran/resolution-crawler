@@ -10,6 +10,7 @@ Contents:
   - bs4 (BeautifulSoup)
   - requests_html
   - pywhatkit
+  - unidecode
   - os
   - sys
 
@@ -21,6 +22,7 @@ type the following commands.
   - bs4: pip install beautifulsoup4
   - requests_html: pip install requests-html
   - pywhatkit: pip install pywhatkit
+  - unidecode: pip install unidecode
 
 -------------------------------------------------------------------------------------------------------------
 
